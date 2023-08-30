@@ -2,3 +2,24 @@
 GET http://localhost:3004/api/v1/user 
 Content-Type: application/json
 
+
+# model User {
+#   id      Int      @id @default(autoincrement())
+#   email   String   @unique
+#   name    String
+#   role    String
+#   profile Profile?
+#   posts   Post[]
+
+#   @@map("users")
+# }
+
+### Create user
+POST http://localhost:3004/api/v1/user/create-user
+Content-Type: application/json
+
+{
+    "name": "sascha",
+    "email": "b@sascha.com",
+    "role": "user"
+}

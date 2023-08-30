@@ -1,3 +1,7 @@
+### 05.Install Prisma Studio [For see table coulum in browser]
+-  npx prisma studio
+
+
 ## ER Diagram
 <img src="https://i.ibb.co/QjjrGmh/er-diagram.png" alt="ER Diagram"></img>
 
