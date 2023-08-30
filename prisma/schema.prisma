@@ -16,21 +16,25 @@ model User {
   email String @unique
   name  String
   role  String
+
+  @@map("users")
 }
 
-//todo: make the Profile Model
 model Profile {
   id     Int    @id @default(autoincrement())
   bio    String
   userId Int
+
+  @@map("profiles")
 }
 
-//todo: make the Catagory Model
 model Catagory {
   id   Int    @id @default(autoincrement())
   name String
+
+  @@map("catagories")
 }
-//todo: make the Post Model
+
 model Post {
   id   Int    @id @default(autoincrement())
   title String
@@ -38,4 +42,7 @@ model Post {
   catagoryId Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+
+  @@map("posts")
 }
