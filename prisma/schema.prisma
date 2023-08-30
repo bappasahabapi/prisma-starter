@@ -10,20 +10,24 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//todo: make the User Model
 model User {
-  id    Int    @id @default(autoincrement())
-  email String @unique
-  name  String
-  role  String
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  name    String
+  role    String
+  profile Profile?
+  posts   Post[]
 
   @@map("users")
 }
 
+//todo: make relationship btn profiles and users[one to one]
+
 model Profile {
   id     Int    @id @default(autoincrement())
   bio    String
-  userId Int
+  userId Int    @unique
+  user   User   @relation(fields: [userId], references: [id])
 
   @@map("profiles")
 }
@@ -31,18 +35,22 @@ model Profile {
 model Catagory {
   id   Int    @id @default(autoincrement())
   name String
+  posts Post[]
 
   @@map("catagories")
 }
 
-model Post {
-  id   Int    @id @default(autoincrement())
-  title String
-  authorId Int
-  catagoryId Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+//todo: make relationship btn users and posts[one to many]
 
+model Post {
+  id         Int      @id @default(autoincrement())
+  title      String
+  authorId   Int
+  author     User     @relation(fields: [authorId], references: [id])
+  catagoryId Int
+  catagory   Catagory @relation(fields: [catagoryId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 
   @@map("posts")
 }
