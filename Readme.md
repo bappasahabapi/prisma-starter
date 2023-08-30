@@ -1,4 +1,22 @@
 
+-    when we change anything in the schema file or model
+    then we use  `npx prisma generate` to fetch the change in the  prisma client.
+
+-    when we run the query in the database then we need to
+`npx prisma migrate dev`
+
+---
+
+-- Any Change in the model
+-    `npx prisma migrate dev` [database e add korbe  new column or change]
+-    `npx prisma migrate --name 20230830153102_emial_unique`
+-    `npx prisma generate`  [only locally add the new column not in the database]
+
+
+---
+
+
+
 ### vsc extention prisma
 ### 01.Install prisma
 
@@ -33,4 +51,10 @@
 
 
 ##  Run Comman index. [`npx ts-node index.ts`]
+
+
+-- Any Change in the model
+-    `npx prisma migrate dev` [database e add korbe  new column or change]
+-    `npx prisma migrate --name 20230830153102_emial_unique`
+-    `npx prisma generate`  [only locally add the new column not in the database]
 
