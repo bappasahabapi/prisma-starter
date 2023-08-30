@@ -1,3 +1,9 @@
+## ER Diagram
+<img src="https://i.ibb.co/QjjrGmh/er-diagram.png" alt="ER Diagram"></img>
+
+
+
+
 
 -    when we change anything in the schema file or model
     then we use  `npx prisma generate` to fetch the change in the  prisma client.
