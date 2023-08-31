@@ -8,6 +8,7 @@ router.get('/',(req,res)=>{
 });
 
 
-router.post('/create-user',UserController.insertIntoDB)
+router.post('/create-user',UserController.insertIntoDB);
+router.post('/profile',UserController.insertOrUpdateProfile);
 
 export const UserRoutes =router;

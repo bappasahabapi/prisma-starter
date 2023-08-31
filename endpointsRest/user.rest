@@ -1,3 +1,8 @@
+
+# First Run  the server `npm start`
+# First Run  prisma studio  `npx prisma studio`
+
+
 ### Get all users
 GET http://localhost:3004/api/v1/user 
 Content-Type: application/json
@@ -22,4 +27,13 @@ Content-Type: application/json
     "name": "sascha",
     "email": "b@sascha.com",
     "role": "user"
+}
+
+### Create or update profile
+POST http://localhost:3004/api/v1/user/profile
+Content-Type: application/json
+
+{
+    "bio": "cute girl",
+    "userId": 2
 }
