@@ -36,9 +36,17 @@ const insertOrUpdateProfile=async (data:Profile): Promise<Profile> =>{
         data
     })
     return result;
-}
+};
+
+//todo: get users
+
+const getUsers = async()=>{
+    const result =await prisma.user.findMany();
+    return result;
+};
 
 export const UserService ={
     insertIntoDB,
-    insertOrUpdateProfile
+    insertOrUpdateProfile,
+    getUsers
 }

@@ -33,7 +33,22 @@ const insertOrUpdateProfile=async(req:Request,res:Response)=>{
 
 };
 
+const getUsers=async(req:Request,res:Response)=>{
+    try {
+        const result =await UserService.getUsers();
+        res.send({
+            success:true,
+            message:"Users retrived successfully",
+            data:result
+        })
+    } 
+    catch (error) {
+        res.send(error);
+    }
+};
+
 export const UserController={
     insertIntoDB,
-    insertOrUpdateProfile
+    insertOrUpdateProfile,
+    getUsers
 }

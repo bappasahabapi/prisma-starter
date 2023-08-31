@@ -3,7 +3,12 @@
 # First Run  prisma studio  `npx prisma studio`
 
 
-### Get all users
+### Get hello prisma response
+GET http://localhost:3004/api/v1/user/test
+Content-Type: application/json
+
+
+### Get users
 GET http://localhost:3004/api/v1/user 
 Content-Type: application/json
 
@@ -24,8 +29,8 @@ POST http://localhost:3004/api/v1/user/create-user
 Content-Type: application/json
 
 {
-    "name": "sascha",
-    "email": "b@sascha.com",
+    "name": "edit-vai",
+    "email": "edit@vai.com",
     "role": "user"
 }
 
@@ -34,6 +39,6 @@ POST http://localhost:3004/api/v1/user/profile
 Content-Type: application/json
 
 {
-    "bio": "cute girl",
-    "userId": 2
+    "bio": "edit-vai updated",
+    "userId": 7
 }

@@ -3,12 +3,13 @@ import { UserController } from './user.controller';
 
 const router =express.Router();
 
-router.get('/',(req,res)=>{
+router.get('/test',(req,res)=>{
     res.send('hello bappa')
 });
 
 
 router.post('/create-user',UserController.insertIntoDB);
 router.post('/profile',UserController.insertOrUpdateProfile);
+router.get('/',UserController.getUsers);
 
 export const UserRoutes =router;
