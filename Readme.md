@@ -1,5 +1,33 @@
+###    💤 [Prisma-excel-sheet](https://docs.google.com/spreadsheets/d/1MBXwR8tweXomw-iDjiiWFAZovhVCEC7w_asXQzT0pYE/edit#gid=475011444) : This is my working details.
 
-### vsc extention prisma
+### 🪸 Branches:
+
+-    [hello_prisma/01](https://github.com/bappasahabapi/prisma-starter/tree/hello_prisma/01)
+-    [hello_prisma/02/small-project](https://github.com/bappasahabapi/prisma-starter/tree/hello_prisma/02/small-project)
+-    [hello_prisma/03/small-project/contribution](https://github.com/bappasahabapi/prisma-starter/tree/hello_prisma/03/small-project/contribution)
+
+-      Run Comman index.ts [`npx ts-node index.ts`]
+---
+## 📊 ER Diagram
+<img src="https://i.ibb.co/QjjrGmh/er-diagram.png" alt="ER Diagram"></img>
+
+---
+
+-    when we change anything in the schema file or model
+    then we use  `npx prisma generate` to fetch the change in the  prisma client.
+
+-    when we run the query in the database then we need to
+`npx prisma migrate dev`
+
+---
+
+###  🚎 Any Change in the model
+-    `npx prisma migrate dev` [database e add korbe  new column or change]
+-    `npx prisma migrate --name 20230830153102_emial_unique`
+-    `npx prisma generate`  [only locally add the new column not in the database]
+
+---
+### 🆚 vsc extention prisma
 ### 01.Install prisma
 
 -    `yarn add -y`
@@ -32,5 +60,6 @@
 - Create a new file named `index.ts `
 
 
-##  Run Comman index. [`npx ts-node index.ts`]
+### 05.Install Prisma Studio [For see table coulum in browser]
+    -  npx prisma studio
 
